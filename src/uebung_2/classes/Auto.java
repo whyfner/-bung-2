@@ -11,7 +11,7 @@ import javax.swing.JOptionPane;
  *
  * @author Hannes
  */
-public class Auto extends Fahrzeug
+public class Auto extends Fahrzeug implements Comparable<Auto>
 {
     private boolean Klimaanlage;
     private short Airbag;
@@ -58,8 +58,8 @@ public class Auto extends Fahrzeug
         this.Klimaanlage = Klimaanlage;
     }
 
-    public Auto(short Airbag, short Reifen, String Farbe, short PS, short Tueren) {
-        super(Reifen, Farbe, PS, Tueren);
+    public Auto(short Airbag, short Reifen, Farbe farbe, short PS, short Tueren) {
+        super(Reifen, farbe, PS, Tueren);
         this.Klimaanlage = false;
         this.Airbag = Airbag;
     }
@@ -69,6 +69,33 @@ public class Auto extends Fahrzeug
     {
         return ("Mein Auto hat "+getPS()+" PS und fährt mit "+getGeschwindigkeit()+" km/h."); //To change body of generated methods, choose Tools | Templates.
     }
+
+    @Override
+    public int compareTo(Auto o) 
+    {
+        if(this.getPS()==o.getPS())
+        {
+            return 0;
+        }
+        else if(this.getPS()<o.getPS())
+        {
+            return -1;
+        }
+        else
+        {
+            return 1;
+        }
+    }
+
+    public Auto(boolean Klimaanlage, short Airbag, short Reifen, short PS, short Tueren) {
+        super(Reifen, Farbe.BLACK, PS, Tueren);
+        this.Klimaanlage = Klimaanlage;
+        this.Airbag = Airbag;
+    }
+    
+    
+
+    
 
     
     

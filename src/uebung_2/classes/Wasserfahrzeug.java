@@ -52,8 +52,8 @@ public class Wasserfahrzeug extends Fahrzeug
         this.Ladung = Ladung;
     }
 
-    public Wasserfahrzeug(double Tiefgang, short Schrauben, double Ladung, short Reifen, String Farbe, short PS, short Tueren) {
-        super(Reifen, Farbe, PS, Tueren);
+    public Wasserfahrzeug(double Tiefgang, short Schrauben, double Ladung, short Reifen, Farbe farbe, short PS, short Tueren) {
+        super(Reifen, farbe, PS, Tueren);
         this.Tiefgang = Tiefgang;
         this.Schrauben = Schrauben;
         this.Ladung = Ladung;

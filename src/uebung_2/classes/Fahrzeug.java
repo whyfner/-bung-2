@@ -12,7 +12,7 @@ package uebung_2.classes;
 public class Fahrzeug 
 {
     private short Reifen;
-    private String Farbe;
+    private Farbe farbe;
     private short PS;
     private short Tueren;
     private boolean Gestartet;
@@ -57,10 +57,6 @@ public class Fahrzeug
         return Reifen;
     }
 
-    public String getFarbe() {
-        return Farbe;
-    }
-
     public short getPS() {
         return PS;
     }
@@ -85,10 +81,6 @@ public class Fahrzeug
         this.Reifen = Reifen;
     }
 
-    public void setFarbe(String Farbe) {
-        this.Farbe = Farbe;
-    }
-
     public void setPS(short PS) {
         this.PS = PS;
     }
@@ -109,9 +101,9 @@ public class Fahrzeug
         Fahrzeug.Anzahl = Anzahl;
     }
 
-    public Fahrzeug(short Reifen, String Farbe, short PS, short Tueren) {
+    public Fahrzeug(short Reifen, Farbe farbe, short PS, short Tueren) {
         this.Reifen = Reifen;
-        this.Farbe = Farbe;
+        this.farbe = farbe;
         this.PS = PS;
         this.Tueren = Tueren;
         this.Gestartet = false;
@@ -119,6 +111,16 @@ public class Fahrzeug
         
         Anzahl++;
     }
+
+    public Farbe getFarbe() {
+        return farbe;
+    }
+
+    public void setFarbe(Farbe farbe) {
+        this.farbe = farbe;
+    }
+    
+    
     
     
 }
